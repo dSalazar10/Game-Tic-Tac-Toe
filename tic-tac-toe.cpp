@@ -162,7 +162,7 @@ bool Validate(int player, char board[3][3])
     // Possible win/loss
     if(player > 4)
     {
-        // if player is even use X, else use O
+        // validate is called after player changed so use reversed pieces
         char piece = (player % 2 == 0) ? ('O') : ('X');
         // Check if board has a win
         if(checkWin(board, piece) == true)
